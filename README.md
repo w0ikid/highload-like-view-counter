@@ -1,6 +1,6 @@
 # highload-like-view-counter
 
-Учебный сервис счётчиков лайков и просмотров, SIS2 / T7. Сейчас реализован **начальный каркас**, а не полный сервис по ТЗ. Использование Go вместо Java требует согласования с преподавателем.
+Учебный сервис счётчиков лайков и просмотров, SIS2 / T7. Реализованы инфраструктурный каркас, базовая доменная модель и email/password auth. Операции счётчиков пока не реализованы. Использование Go вместо Java требует согласования с преподавателем.
 
 Структура следует qrgo-back; инфраструктура использует только публичные Go-модули. Бизнес-код QRGO, Adata, RabbitMQ и приватные библиотеки не перенесены.
 
@@ -12,7 +12,7 @@ cmd/
   worker/               точка входа будущих фоновых задач
 internal/
   bootstrap/            config, deps, app.go, Swagger/Scalar
-  domain/counter/       доменные модели
+  domain/               доменные модели и ошибки
   usecase/counters/     место для общей бизнес-логики
   transport/rest/        health/readiness
   transport/grpc/        место для gRPC-адаптера
@@ -31,7 +31,7 @@ benchmarks/results/     место для сырых измерений
 test/integration/      место для интеграционных проверок
 ```
 
-Работают HTTP-запуск, `/healthz`, `/readyz`, миграции и повторяемый seed. `/readyz` проверяет соединения PostgreSQL и Redis; наличие схемы обеспечивает отдельная migration-команда. REST-операции счётчиков, gRPC-сервер, worker, измерения и отчёт ещё предстоит реализовать. Worker намеренно завершается с ошибкой до подключения задач.
+Работают HTTP-запуск, `/healthz`, `/readyz`, миграции, повторяемый seed и auth: регистрация, вход, refresh/logout, профиль, forgot/reset password. `/readyz` проверяет соединения PostgreSQL и Redis; наличие схемы обеспечивает отдельная migration-команда. REST-операции счётчиков, gRPC-сервер, worker, измерения и отчёт ещё предстоит реализовать. Worker намеренно завершается с ошибкой до подключения задач.
 
 ## Запуск Docker Compose
 
@@ -56,7 +56,7 @@ cp .env.example .env
 set -a
 . ./.env
 set +a
-docker compose up -d postgres redis
+docker compose up -d postgres redis mailhog
 go run ./cmd/migrate up
 go run ./cmd/seed -posts 100
 go run -tags swagger ./cmd/http
@@ -97,3 +97,13 @@ npm run dev
 ```
 
 Открыть http://localhost:5173. API должен работать на порту 8080. Подробности: [web-service/README.md](web-service/README.md).
+
+## Пользователи и авторизация
+
+Доменные сущности описаны в [CONTEXT.md](CONTEXT.md). Auth — согласованное расширение исходного SIS2, где авторизация была вне объёма.
+
+Для существующего `.env` добавьте новые параметры из `.env.example`, особенно `JWT_SECRET` (минимум 32 байта). Миграция `00002_auth.sql` создаёт users, user_credentials, sessions и password_resets. Старую миграцию счётчиков менять не нужно.
+
+MailHog: http://localhost:8025, локальный SMTP: localhost:1025. Письмо сброса ведёт на страницу `http://localhost:5173/reset-password`; frontend нужно запустить отдельно. Auth-контракты доступны в Swagger/Scalar.
+
+Подробности, примеры запросов и проверки: [docs/auth.md](docs/auth.md). Контейнер MailHog предназначен только для локальной разработки и не отправляет письма во внешние почтовые ящики.

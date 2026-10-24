@@ -35,3 +35,6 @@ footer { color: #647084; font-size: 12px; padding: 32px 0; }
   .intro { padding-top: 44px; }
   .panel { align-items: stretch; flex-direction: column; padding: 24px; }
 }
+
+.reset-form { display: grid; gap: 12px; max-width: 440px; margin-bottom: 48px; }
+.reset-form input { padding: 12px; font: inherit; border: 1px solid #cbd3de; border-radius: 7px; }

@@ -6,6 +6,7 @@ import (
 	"fmt"
 
 	"github.com/jmoiron/sqlx"
+	"highload-counters/internal/domain"
 )
 
 type Querier interface {
@@ -43,12 +44,15 @@ func (m *Manager) WithinTx(ctx context.Context, fn func(ctx context.Context) err
 	}
 	tx, err := m.db.BeginTxx(ctx, nil)
 	if err != nil {
-		return fmt.Errorf("begin tx: %w", err)
+		return fmt.Errorf("begin tx: %w: %w", domain.ErrUnavailable, err)
 	}
 	defer func() { _ = tx.Rollback() }()
 	if err := fn(Inject(ctx, tx)); err != nil {
 		_ = tx.Rollback()
 		return err
 	}
-	return tx.Commit()
+	if err := tx.Commit(); err != nil {
+		return fmt.Errorf("commit tx: %w: %w", domain.ErrUnavailable, err)
+	}
+	return nil
 }

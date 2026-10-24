@@ -3,7 +3,9 @@ package bootstrap
 import (
 	"context"
 	"errors"
+	redisstore "highload-counters/internal/infrastructure/redis"
 	"highload-counters/internal/transport/rest"
+	restauth "highload-counters/internal/transport/rest/auth"
 	"net/http"
 	"time"
 )
@@ -15,6 +17,7 @@ type App struct {
 
 func NewApp(c Config, d *Deps) *App {
 	mux := rest.NewRouter(func(ctx context.Context) error { return d.Ready(ctx, c) }, c.RequestTimeout)
+	restauth.New(d.Auth, &redisstore.RateLimiter{Client: d.Redis, Timeout: c.RedisTimeout}, c.AuthTimeout).RegisterRoutes(mux)
 	registerSwagger(mux)
 	return &App{config: c, server: &http.Server{
 		Addr: c.HTTPAddr, Handler: mux, ReadHeaderTimeout: 5 * time.Second,

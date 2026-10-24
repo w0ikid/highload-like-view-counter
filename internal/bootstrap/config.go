@@ -2,21 +2,50 @@ package bootstrap
 
 import (
 	"fmt"
+	"net"
+	"net/mail"
+	"net/url"
 	"os"
+	"strings"
 	"time"
 )
 
 type Config struct {
+	JWTSecret, SMTPAddr, MailFrom, PasswordResetURL                string
+	AccessTTL, RefreshTTL, ResetTTL, AuthTimeout, SMTPTimeout      time.Duration
 	HTTPAddr, PostgresDSN, RedisAddr                               string
 	RequestTimeout, PostgresTimeout, RedisTimeout, ShutdownTimeout time.Duration
 }
 
 func NewConfig() (Config, error) {
 	c := Config{HTTPAddr: env("HTTP_ADDR", ":8080"), PostgresDSN: os.Getenv("POSTGRES_DSN"), RedisAddr: env("REDIS_ADDR", "localhost:6379")}
+	c.JWTSecret = os.Getenv("JWT_SECRET")
+	c.SMTPAddr = env("SMTP_ADDR", "localhost:1025")
+	c.MailFrom = env("MAIL_FROM", "no-reply@counters.local")
+	c.PasswordResetURL = env("PASSWORD_RESET_URL", "http://localhost:5173/reset-password")
+	if len(c.JWTSecret) < 32 {
+		return c, fmt.Errorf("JWT_SECRET must contain at least 32 bytes")
+	}
+	if _, _, err := net.SplitHostPort(c.SMTPAddr); err != nil {
+		return c, fmt.Errorf("invalid SMTP_ADDR")
+	}
+	address, err := mail.ParseAddress(c.MailFrom)
+	if err != nil || address.Address != c.MailFrom || strings.ContainsAny(c.MailFrom, "\r\n") {
+		return c, fmt.Errorf("invalid MAIL_FROM")
+	}
+	resetURL, err := url.Parse(c.PasswordResetURL)
+	if err != nil || (resetURL.Scheme != "http" && resetURL.Scheme != "https") || resetURL.Host == "" || resetURL.User != nil || resetURL.Fragment != "" {
+		return c, fmt.Errorf("invalid PASSWORD_RESET_URL")
+	}
 	for _, item := range []struct {
 		name, fallback string
 		dest           *time.Duration
 	}{
+		{"ACCESS_TOKEN_TTL", "15m", &c.AccessTTL},
+		{"REFRESH_TOKEN_TTL", "720h", &c.RefreshTTL},
+		{"PASSWORD_RESET_TTL", "15m", &c.ResetTTL},
+		{"AUTH_TIMEOUT", "5s", &c.AuthTimeout},
+		{"SMTP_TIMEOUT", "2s", &c.SMTPTimeout},
 		{"REQUEST_TIMEOUT", "1s", &c.RequestTimeout},
 		{"POSTGRES_TIMEOUT", "500ms", &c.PostgresTimeout},
 		{"REDIS_TIMEOUT", "100ms", &c.RedisTimeout},
