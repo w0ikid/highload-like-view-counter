@@ -1,0 +1,1 @@
+SQL-миграции Goose встроены в бинарник через embed.FS. Первая миграция создаёт posts, likes, post_counters и counter_flush_log. Применение: go run ./cmd/migrate up. Статус: go run ./cmd/migrate status. Откат одной миграции: go run ./cmd/migrate down (удаляет соответствующие данные). Seed запускается отдельно и повторно не обнуляет счётчики.

@@ -1,0 +1,10 @@
+.git
+.env
+.agents
+.codex
+.aws
+bin
+benchmarks/results
+web-service/node_modules
+web-service/dist
+web-service/.env*

@@ -1,0 +1,33 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Highload Counters \u2014 scaffold",
+    "version": "0.1.0",
+    "description": "Only health/readiness are implemented. Counter operations are planned; see the proto contract."
+  },
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "Process liveness",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/readyz": {
+      "get": {
+        "summary": "PostgreSQL and Redis readiness",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "503": {
+            "description": "Dependency unavailable"
+          }
+        }
+      }
+    }
+  }
+}
