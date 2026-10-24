@@ -11,6 +11,8 @@ import (
 )
 
 type Config struct {
+	GRPCAddr, CounterAuthMode, RedisNamespace                      string
+	ViewTTL, FlushInterval, ReconcileInterval, WorkerBudget        time.Duration
 	JWTSecret, SMTPAddr, MailFrom, PasswordResetURL                string
 	AccessTTL, RefreshTTL, ResetTTL, AuthTimeout, SMTPTimeout      time.Duration
 	HTTPAddr, PostgresDSN, RedisAddr                               string
@@ -19,6 +21,15 @@ type Config struct {
 
 func NewConfig() (Config, error) {
 	c := Config{HTTPAddr: env("HTTP_ADDR", ":8080"), PostgresDSN: os.Getenv("POSTGRES_DSN"), RedisAddr: env("REDIS_ADDR", "localhost:6379")}
+	c.GRPCAddr = env("GRPC_ADDR", ":9090")
+	c.CounterAuthMode = env("COUNTER_AUTH_MODE", "bearer")
+	if c.CounterAuthMode != "test" && c.CounterAuthMode != "bearer" {
+		return c, fmt.Errorf("COUNTER_AUTH_MODE must be test or bearer")
+	}
+	c.RedisNamespace = env("REDIS_NAMESPACE", "counters")
+	if strings.ContainsAny(c.RedisNamespace, "{}") {
+		return c, fmt.Errorf("REDIS_NAMESPACE must not contain braces")
+	}
 	c.JWTSecret = os.Getenv("JWT_SECRET")
 	c.SMTPAddr = env("SMTP_ADDR", "localhost:1025")
 	c.MailFrom = env("MAIL_FROM", "no-reply@counters.local")
@@ -41,6 +52,10 @@ func NewConfig() (Config, error) {
 		name, fallback string
 		dest           *time.Duration
 	}{
+		{"VIEW_TTL", "1h", &c.ViewTTL},
+		{"FLUSH_INTERVAL", "1s", &c.FlushInterval},
+		{"RECONCILE_INTERVAL", "1m", &c.ReconcileInterval},
+		{"WORKER_BUDGET", "5s", &c.WorkerBudget},
 		{"ACCESS_TOKEN_TTL", "15m", &c.AccessTTL},
 		{"REFRESH_TOKEN_TTL", "720h", &c.RefreshTTL},
 		{"PASSWORD_RESET_TTL", "15m", &c.ResetTTL},

@@ -1,1 +1,1 @@
-Следующий этап: расписание и ручной запуск пересчёта likes. И like/unlike, и reconciler сначала блокируют строку post_counters; COUNT выполняется после получения блокировки при READ COMMITTED. Views здесь не восстанавливаются.
+Реализация: PostgreSQL counter.Repository.Reconcile. Для каждого поста открывает READ COMMITTED транзакцию, блокирует post_counters и затем отдельным SQL-запросом пересчитывает likes. Like/unlike берут ту же блокировку. Это не позволяет старому снимку COUNT перезаписать более новый счётчик. Views reconciler не изменяет.

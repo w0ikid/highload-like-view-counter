@@ -1,1 +1,1 @@
-Здесь будет gRPC-адаптер общего counters service. Контракт: api/proto/counters/v1/counters.proto. Генерация Go-кода и запуск gRPC-сервера пока не подключены.
+gRPC-адаптер общего counters service, порт 9090. Сгенерированный код хранится в api/gen/counters/v1. Сервер ограничивает входящее сообщение 16 KiB, задаёт общий deadline и возвращает x-request-id в metadata. Режим идентификации общий с REST: test (x-user-id) либо bearer (authorization).

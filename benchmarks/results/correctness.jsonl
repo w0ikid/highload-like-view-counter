@@ -1,0 +1,218 @@
+{"Time":"2026-10-24T12:44:07.643402352+05:00","Action":"start","Package":"highload-counters/api/gen/counters/v1"}
+{"Time":"2026-10-24T12:44:07.643453139+05:00","Action":"output","Package":"highload-counters/api/gen/counters/v1","Output":"?   \thighload-counters/api/gen/counters/v1\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:07.64346446+05:00","Action":"skip","Package":"highload-counters/api/gen/counters/v1","Elapsed":0}
+{"Time":"2026-10-24T12:44:07.644542156+05:00","Action":"start","Package":"highload-counters/cmd/bench"}
+{"Time":"2026-10-24T12:44:07.644558006+05:00","Action":"output","Package":"highload-counters/cmd/bench","Output":"?   \thighload-counters/cmd/bench\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:07.644564729+05:00","Action":"skip","Package":"highload-counters/cmd/bench","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056605396+05:00","Action":"start","Package":"highload-counters/cmd/http"}
+{"Time":"2026-10-24T12:44:08.0566287+05:00","Action":"output","Package":"highload-counters/cmd/http","Output":"?   \thighload-counters/cmd/http\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056635493+05:00","Action":"skip","Package":"highload-counters/cmd/http","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056644701+05:00","Action":"start","Package":"highload-counters/cmd/migrate"}
+{"Time":"2026-10-24T12:44:08.056648768+05:00","Action":"output","Package":"highload-counters/cmd/migrate","Output":"?   \thighload-counters/cmd/migrate\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056652125+05:00","Action":"skip","Package":"highload-counters/cmd/migrate","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056658487+05:00","Action":"start","Package":"highload-counters/cmd/reconcile"}
+{"Time":"2026-10-24T12:44:08.056662094+05:00","Action":"output","Package":"highload-counters/cmd/reconcile","Output":"?   \thighload-counters/cmd/reconcile\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.05666561+05:00","Action":"skip","Package":"highload-counters/cmd/reconcile","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.05667073+05:00","Action":"start","Package":"highload-counters/cmd/seed"}
+{"Time":"2026-10-24T12:44:08.05667566+05:00","Action":"output","Package":"highload-counters/cmd/seed","Output":"?   \thighload-counters/cmd/seed\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056678956+05:00","Action":"skip","Package":"highload-counters/cmd/seed","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056683484+05:00","Action":"start","Package":"highload-counters/cmd/worker"}
+{"Time":"2026-10-24T12:44:08.056697531+05:00","Action":"output","Package":"highload-counters/cmd/worker","Output":"?   \thighload-counters/cmd/worker\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056703092+05:00","Action":"skip","Package":"highload-counters/cmd/worker","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056708983+05:00","Action":"start","Package":"highload-counters/docs"}
+{"Time":"2026-10-24T12:44:08.056712039+05:00","Action":"output","Package":"highload-counters/docs","Output":"?   \thighload-counters/docs\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056715385+05:00","Action":"skip","Package":"highload-counters/docs","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056721426+05:00","Action":"start","Package":"highload-counters/internal/bootstrap"}
+{"Time":"2026-10-24T12:44:08.056725083+05:00","Action":"output","Package":"highload-counters/internal/bootstrap","Output":"?   \thighload-counters/internal/bootstrap\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056727819+05:00","Action":"skip","Package":"highload-counters/internal/bootstrap","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056732287+05:00","Action":"start","Package":"highload-counters/internal/domain"}
+{"Time":"2026-10-24T12:44:08.056735162+05:00","Action":"output","Package":"highload-counters/internal/domain","Output":"?   \thighload-counters/internal/domain\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056737617+05:00","Action":"skip","Package":"highload-counters/internal/domain","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056742637+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/mail"}
+{"Time":"2026-10-24T12:44:08.05674959+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/mail","Output":"?   \thighload-counters/internal/infrastructure/mail\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056753307+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/mail","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056757545+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/postgres"}
+{"Time":"2026-10-24T12:44:08.056761753+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/postgres","Output":"?   \thighload-counters/internal/infrastructure/postgres\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056764398+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/postgres","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056768606+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/postgres/counter"}
+{"Time":"2026-10-24T12:44:08.056771792+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/postgres/counter","Output":"?   \thighload-counters/internal/infrastructure/postgres/counter\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056774738+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/postgres/counter","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056779066+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/postgres/credential"}
+{"Time":"2026-10-24T12:44:08.056781861+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/postgres/credential","Output":"?   \thighload-counters/internal/infrastructure/postgres/credential\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056784406+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/postgres/credential","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056792361+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/postgres/passwordreset"}
+{"Time":"2026-10-24T12:44:08.056795437+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/postgres/passwordreset","Output":"?   \thighload-counters/internal/infrastructure/postgres/passwordreset\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056798112+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/postgres/passwordreset","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.0568021+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/postgres/session"}
+{"Time":"2026-10-24T12:44:08.056804835+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/postgres/session","Output":"?   \thighload-counters/internal/infrastructure/postgres/session\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056807319+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/postgres/session","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056812269+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/postgres/user"}
+{"Time":"2026-10-24T12:44:08.056815024+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/postgres/user","Output":"?   \thighload-counters/internal/infrastructure/postgres/user\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056817849+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/postgres/user","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056821837+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/redis"}
+{"Time":"2026-10-24T12:44:08.056825314+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/redis","Output":"?   \thighload-counters/internal/infrastructure/redis\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056828339+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/redis","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056832527+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/sqltx"}
+{"Time":"2026-10-24T12:44:08.056835052+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/sqltx","Output":"?   \thighload-counters/internal/infrastructure/sqltx\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056840372+05:00","Action":"skip","Package":"highload-counters/internal/infrastructure/sqltx","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056845271+05:00","Action":"start","Package":"highload-counters/internal/infrastructure/token"}
+{"Time":"2026-10-24T12:44:08.056887341+05:00","Action":"start","Package":"highload-counters/internal/transport/counterdto"}
+{"Time":"2026-10-24T12:44:08.056891239+05:00","Action":"output","Package":"highload-counters/internal/transport/counterdto","Output":"?   \thighload-counters/internal/transport/counterdto\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056896178+05:00","Action":"skip","Package":"highload-counters/internal/transport/counterdto","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056900156+05:00","Action":"start","Package":"highload-counters/internal/transport/grpc"}
+{"Time":"2026-10-24T12:44:08.056903412+05:00","Action":"output","Package":"highload-counters/internal/transport/grpc","Output":"?   \thighload-counters/internal/transport/grpc\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056906327+05:00","Action":"skip","Package":"highload-counters/internal/transport/grpc","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056910505+05:00","Action":"start","Package":"highload-counters/internal/transport/identity"}
+{"Time":"2026-10-24T12:44:08.056913641+05:00","Action":"output","Package":"highload-counters/internal/transport/identity","Output":"?   \thighload-counters/internal/transport/identity\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056916907+05:00","Action":"skip","Package":"highload-counters/internal/transport/identity","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056920785+05:00","Action":"start","Package":"highload-counters/internal/transport/rest"}
+{"Time":"2026-10-24T12:44:08.056923831+05:00","Action":"output","Package":"highload-counters/internal/transport/rest","Output":"?   \thighload-counters/internal/transport/rest\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056926927+05:00","Action":"skip","Package":"highload-counters/internal/transport/rest","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056930854+05:00","Action":"start","Package":"highload-counters/internal/transport/rest/auth"}
+{"Time":"2026-10-24T12:44:08.05693404+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/auth","Output":"?   \thighload-counters/internal/transport/rest/auth\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056937016+05:00","Action":"skip","Package":"highload-counters/internal/transport/rest/auth","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056940983+05:00","Action":"start","Package":"highload-counters/internal/transport/rest/counters"}
+{"Time":"2026-10-24T12:44:08.056944189+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/counters","Output":"?   \thighload-counters/internal/transport/rest/counters\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.056947526+05:00","Action":"skip","Package":"highload-counters/internal/transport/rest/counters","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.056952235+05:00","Action":"start","Package":"highload-counters/internal/transport/rest/response"}
+{"Time":"2026-10-24T12:44:08.057299734+05:00","Action":"start","Package":"highload-counters/internal/usecase/auth"}
+{"Time":"2026-10-24T12:44:08.057327246+05:00","Action":"output","Package":"highload-counters/internal/usecase/auth","Output":"?   \thighload-counters/internal/usecase/auth\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.057347715+05:00","Action":"skip","Package":"highload-counters/internal/usecase/auth","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.057356252+05:00","Action":"start","Package":"highload-counters/internal/usecase/counters"}
+{"Time":"2026-10-24T12:44:08.057361031+05:00","Action":"output","Package":"highload-counters/internal/usecase/counters","Output":"?   \thighload-counters/internal/usecase/counters\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.057366932+05:00","Action":"skip","Package":"highload-counters/internal/usecase/counters","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.057377011+05:00","Action":"start","Package":"highload-counters/internal/worker"}
+{"Time":"2026-10-24T12:44:08.057386088+05:00","Action":"output","Package":"highload-counters/internal/worker","Output":"?   \thighload-counters/internal/worker\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.057391028+05:00","Action":"skip","Package":"highload-counters/internal/worker","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.057398442+05:00","Action":"start","Package":"highload-counters/migrations"}
+{"Time":"2026-10-24T12:44:08.057402579+05:00","Action":"output","Package":"highload-counters/migrations","Output":"?   \thighload-counters/migrations\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.057406246+05:00","Action":"skip","Package":"highload-counters/migrations","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065135009+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse"}
+{"Time":"2026-10-24T12:44:08.065168142+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse","Output":"=== RUN   TestDomainErrorResponse\n"}
+{"Time":"2026-10-24T12:44:08.06518287+05:00","Action":"run","Package":"highload-counters/internal/infrastructure/token","Test":"TestStrictJWTValidation"}
+{"Time":"2026-10-24T12:44:08.065190064+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/field"}
+{"Time":"2026-10-24T12:44:08.065194903+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/field","Output":"=== RUN   TestDomainErrorResponse/field\n"}
+{"Time":"2026-10-24T12:44:08.065193139+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/token","Test":"TestStrictJWTValidation","Output":"=== RUN   TestStrictJWTValidation\n"}
+{"Time":"2026-10-24T12:44:08.065375225+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/field","Output":"--- PASS: TestDomainErrorResponse/field (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065384272+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/field","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065396505+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/credentials"}
+{"Time":"2026-10-24T12:44:08.06539894+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/credentials","Output":"=== RUN   TestDomainErrorResponse/credentials\n"}
+{"Time":"2026-10-24T12:44:08.065460727+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/credentials","Output":"--- PASS: TestDomainErrorResponse/credentials (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065469113+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/credentials","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065473692+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/email_conflict"}
+{"Time":"2026-10-24T12:44:08.065476056+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/email_conflict","Output":"=== RUN   TestDomainErrorResponse/email_conflict\n"}
+{"Time":"2026-10-24T12:44:08.065536872+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/email_conflict","Output":"--- PASS: TestDomainErrorResponse/email_conflict (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.06554663+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/email_conflict","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065555287+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/expired"}
+{"Time":"2026-10-24T12:44:08.065562741+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/expired","Output":"=== RUN   TestDomainErrorResponse/expired\n"}
+{"Time":"2026-10-24T12:44:08.065608458+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/expired","Output":"--- PASS: TestDomainErrorResponse/expired (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065618136+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/expired","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065627985+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/dependency"}
+{"Time":"2026-10-24T12:44:08.065630229+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/dependency","Output":"=== RUN   TestDomainErrorResponse/dependency\n"}
+{"Time":"2026-10-24T12:44:08.06572042+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/dependency","Output":"2026/10/24 12:44:08 ERROR request failed request_id=request-123 code=unavailable\n"}
+{"Time":"2026-10-24T12:44:08.065755006+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/dependency","Output":"--- PASS: TestDomainErrorResponse/dependency (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065763412+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/dependency","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065773922+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/unexpected"}
+{"Time":"2026-10-24T12:44:08.065776066+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/unexpected","Output":"=== RUN   TestDomainErrorResponse/unexpected\n"}
+{"Time":"2026-10-24T12:44:08.065831672+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/unexpected","Output":"2026/10/24 12:44:08 ERROR request failed request_id=request-123 code=internal_error\n"}
+{"Time":"2026-10-24T12:44:08.065836711+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/token","Test":"TestStrictJWTValidation","Output":"--- PASS: TestStrictJWTValidation (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065858663+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/unexpected","Output":"--- PASS: TestDomainErrorResponse/unexpected (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065861638+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/unexpected","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065863762+05:00","Action":"pass","Package":"highload-counters/internal/infrastructure/token","Test":"TestStrictJWTValidation","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065873311+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/token","Output":"PASS\n"}
+{"Time":"2026-10-24T12:44:08.065874052+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/deadline_precedence"}
+{"Time":"2026-10-24T12:44:08.065880634+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/deadline_precedence","Output":"=== RUN   TestDomainErrorResponse/deadline_precedence\n"}
+{"Time":"2026-10-24T12:44:08.065913797+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/deadline_precedence","Output":"2026/10/24 12:44:08 ERROR request failed request_id=request-123 code=deadline_exceeded\n"}
+{"Time":"2026-10-24T12:44:08.065941911+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/deadline_precedence","Output":"--- PASS: TestDomainErrorResponse/deadline_precedence (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065948483+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse/deadline_precedence","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065971697+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse","Output":"--- PASS: TestDomainErrorResponse (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.065977348+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestDomainErrorResponse","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.065992226+05:00","Action":"run","Package":"highload-counters/internal/transport/rest/response","Test":"TestWrappedSpecificErrorKeepsKind"}
+{"Time":"2026-10-24T12:44:08.065994541+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestWrappedSpecificErrorKeepsKind","Output":"=== RUN   TestWrappedSpecificErrorKeepsKind\n"}
+{"Time":"2026-10-24T12:44:08.06605222+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Test":"TestWrappedSpecificErrorKeepsKind","Output":"--- PASS: TestWrappedSpecificErrorKeepsKind (0.00s)\n"}
+{"Time":"2026-10-24T12:44:08.066063892+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Test":"TestWrappedSpecificErrorKeepsKind","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.066074513+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Output":"PASS\n"}
+{"Time":"2026-10-24T12:44:08.137008437+05:00","Action":"start","Package":"highload-counters/pkg/counterclient"}
+{"Time":"2026-10-24T12:44:08.137106052+05:00","Action":"start","Package":"highload-counters/pkg/passwordhash"}
+{"Time":"2026-10-24T12:44:08.137200952+05:00","Action":"start","Package":"highload-counters/pkg/traceid"}
+{"Time":"2026-10-24T12:44:08.137219067+05:00","Action":"output","Package":"highload-counters/pkg/traceid","Output":"?   \thighload-counters/pkg/traceid\t[no test files]\n"}
+{"Time":"2026-10-24T12:44:08.137225419+05:00","Action":"skip","Package":"highload-counters/pkg/traceid","Elapsed":0}
+{"Time":"2026-10-24T12:44:08.13723149+05:00","Action":"start","Package":"highload-counters/test/integration/auth"}
+{"Time":"2026-10-24T12:44:08.144974089+05:00","Action":"run","Package":"highload-counters/pkg/passwordhash","Test":"TestPasswordRoundTrip"}
+{"Time":"2026-10-24T12:44:08.145008464+05:00","Action":"output","Package":"highload-counters/pkg/passwordhash","Test":"TestPasswordRoundTrip","Output":"=== RUN   TestPasswordRoundTrip\n"}
+{"Time":"2026-10-24T12:44:08.145141006+05:00","Action":"run","Package":"highload-counters/test/integration/auth","Test":"TestAuthLifecycle"}
+{"Time":"2026-10-24T12:44:08.145145515+05:00","Action":"output","Package":"highload-counters/test/integration/auth","Test":"TestAuthLifecycle","Output":"=== RUN   TestAuthLifecycle\n"}
+{"Time":"2026-10-24T12:44:08.146654038+05:00","Action":"run","Package":"highload-counters/pkg/counterclient","Test":"TestBoundedRetries"}
+{"Time":"2026-10-24T12:44:08.146666432+05:00","Action":"output","Package":"highload-counters/pkg/counterclient","Test":"TestBoundedRetries","Output":"=== RUN   TestBoundedRetries\n"}
+{"Time":"2026-10-24T12:44:08.185280409+05:00","Action":"output","Package":"highload-counters/test/integration/auth","Test":"TestAuthLifecycle","Output":"2026/10/24 12:44:08 OK   00001_counters.sql (11.17ms)\n"}
+{"Time":"2026-10-24T12:44:08.21240327+05:00","Action":"output","Package":"highload-counters/test/integration/auth","Test":"TestAuthLifecycle","Output":"2026/10/24 12:44:08 OK   00002_auth.sql (16.05ms)\n"}
+{"Time":"2026-10-24T12:44:08.212481548+05:00","Action":"output","Package":"highload-counters/test/integration/auth","Test":"TestAuthLifecycle","Output":"2026/10/24 12:44:08 goose: successfully migrated database to version: 2\n"}
+{"Time":"2026-10-24T12:44:08.328754096+05:00","Action":"output","Package":"highload-counters/pkg/passwordhash","Test":"TestPasswordRoundTrip","Output":"--- PASS: TestPasswordRoundTrip (0.18s)\n"}
+{"Time":"2026-10-24T12:44:08.328797378+05:00","Action":"pass","Package":"highload-counters/pkg/passwordhash","Test":"TestPasswordRoundTrip","Elapsed":0.18}
+{"Time":"2026-10-24T12:44:08.32880358+05:00","Action":"output","Package":"highload-counters/pkg/passwordhash","Output":"PASS\n"}
+{"Time":"2026-10-24T12:44:08.354494071+05:00","Action":"output","Package":"highload-counters/pkg/counterclient","Test":"TestBoundedRetries","Output":"--- PASS: TestBoundedRetries (0.21s)\n"}
+{"Time":"2026-10-24T12:44:08.354537283+05:00","Action":"pass","Package":"highload-counters/pkg/counterclient","Test":"TestBoundedRetries","Elapsed":0.21}
+{"Time":"2026-10-24T12:44:08.354546591+05:00","Action":"output","Package":"highload-counters/pkg/counterclient","Output":"PASS\n"}
+{"Time":"2026-10-24T12:44:08.667147677+05:00","Action":"start","Package":"highload-counters/test/integration/counters"}
+{"Time":"2026-10-24T12:44:08.682153535+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2"}
+{"Time":"2026-10-24T12:44:08.682214+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2","Output":"=== RUN   TestCountersSIS2\n"}
+{"Time":"2026-10-24T12:44:08.730189459+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2","Output":"2026/10/24 12:44:08 OK   00001_counters.sql (11.56ms)\n"}
+{"Time":"2026-10-24T12:44:08.757265982+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2","Output":"2026/10/24 12:44:08 OK   00002_auth.sql (16.42ms)\n"}
+{"Time":"2026-10-24T12:44:08.757298413+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2","Output":"2026/10/24 12:44:08 goose: successfully migrated database to version: 2\n"}
+{"Time":"2026-10-24T12:44:08.762448891+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/100_concurrent_likes_and_repeated_unlike"}
+{"Time":"2026-10-24T12:44:08.762472256+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/100_concurrent_likes_and_repeated_unlike","Output":"=== RUN   TestCountersSIS2/100_concurrent_likes_and_repeated_unlike\n"}
+{"Time":"2026-10-24T12:44:08.836028929+05:00","Action":"output","Package":"highload-counters/test/integration/auth","Test":"TestAuthLifecycle","Output":"--- PASS: TestAuthLifecycle (0.69s)\n"}
+{"Time":"2026-10-24T12:44:08.836084384+05:00","Action":"pass","Package":"highload-counters/test/integration/auth","Test":"TestAuthLifecycle","Elapsed":0.69}
+{"Time":"2026-10-24T12:44:08.836093542+05:00","Action":"output","Package":"highload-counters/test/integration/auth","Output":"PASS\n"}
+{"Time":"2026-10-24T12:44:08.885899325+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/100_concurrent_likes_and_repeated_unlike","Output":"--- PASS: TestCountersSIS2/100_concurrent_likes_and_repeated_unlike (0.12s)\n"}
+{"Time":"2026-10-24T12:44:08.885946344+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/100_concurrent_likes_and_repeated_unlike","Elapsed":0.12}
+{"Time":"2026-10-24T12:44:08.885956203+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/cross_protocol_dedup_and_full_validation"}
+{"Time":"2026-10-24T12:44:08.885961553+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/cross_protocol_dedup_and_full_validation","Output":"=== RUN   TestCountersSIS2/cross_protocol_dedup_and_full_validation\n"}
+{"Time":"2026-10-24T12:44:08.893947654+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/cross_protocol_dedup_and_full_validation","Output":"--- PASS: TestCountersSIS2/cross_protocol_dedup_and_full_validation (0.01s)\n"}
+{"Time":"2026-10-24T12:44:08.893972101+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/cross_protocol_dedup_and_full_validation","Elapsed":0.01}
+{"Time":"2026-10-24T12:44:08.893978733+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dedup_window_does_not_slide"}
+{"Time":"2026-10-24T12:44:08.893981879+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dedup_window_does_not_slide","Output":"=== RUN   TestCountersSIS2/dedup_window_does_not_slide\n"}
+{"Time":"2026-10-24T12:44:09.067404092+05:00","Action":"output","Package":"highload-counters/internal/infrastructure/token","Output":"ok  \thighload-counters/internal/infrastructure/token\t1.010s\n"}
+{"Time":"2026-10-24T12:44:09.067446613+05:00","Action":"pass","Package":"highload-counters/internal/infrastructure/token","Elapsed":1.011}
+{"Time":"2026-10-24T12:44:09.067790806+05:00","Action":"output","Package":"highload-counters/internal/transport/rest/response","Output":"ok  \thighload-counters/internal/transport/rest/response\t1.011s\n"}
+{"Time":"2026-10-24T12:44:09.067806787+05:00","Action":"pass","Package":"highload-counters/internal/transport/rest/response","Elapsed":1.011}
+{"Time":"2026-10-24T12:44:09.345960686+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dedup_window_does_not_slide","Output":"--- PASS: TestCountersSIS2/dedup_window_does_not_slide (0.45s)\n"}
+{"Time":"2026-10-24T12:44:09.345998889+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dedup_window_does_not_slide","Elapsed":0.45}
+{"Time":"2026-10-24T12:44:09.346007625+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/concurrent_mixed_likes_and_reconciler"}
+{"Time":"2026-10-24T12:44:09.346012184+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/concurrent_mixed_likes_and_reconciler","Output":"=== RUN   TestCountersSIS2/concurrent_mixed_likes_and_reconciler\n"}
+{"Time":"2026-10-24T12:44:09.35453284+05:00","Action":"output","Package":"highload-counters/pkg/passwordhash","Output":"ok  \thighload-counters/pkg/passwordhash\t1.217s\n"}
+{"Time":"2026-10-24T12:44:09.354567215+05:00","Action":"pass","Package":"highload-counters/pkg/passwordhash","Elapsed":1.217}
+{"Time":"2026-10-24T12:44:09.356522818+05:00","Action":"output","Package":"highload-counters/pkg/counterclient","Output":"ok  \thighload-counters/pkg/counterclient\t1.219s\n"}
+{"Time":"2026-10-24T12:44:09.356545271+05:00","Action":"pass","Package":"highload-counters/pkg/counterclient","Elapsed":1.22}
+{"Time":"2026-10-24T12:44:09.75502385+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/concurrent_mixed_likes_and_reconciler","Output":"--- PASS: TestCountersSIS2/concurrent_mixed_likes_and_reconciler (0.41s)\n"}
+{"Time":"2026-10-24T12:44:09.755082682+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/concurrent_mixed_likes_and_reconciler","Elapsed":0.41}
+{"Time":"2026-10-24T12:44:09.755095146+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/worker_process_crash_before_and_after_commit"}
+{"Time":"2026-10-24T12:44:09.755099213+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/worker_process_crash_before_and_after_commit","Output":"=== RUN   TestCountersSIS2/worker_process_crash_before_and_after_commit\n"}
+{"Time":"2026-10-24T12:44:09.804036138+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/worker_process_crash_before_and_after_commit","Output":"--- PASS: TestCountersSIS2/worker_process_crash_before_and_after_commit (0.05s)\n"}
+{"Time":"2026-10-24T12:44:09.804071555+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/worker_process_crash_before_and_after_commit","Elapsed":0.05}
+{"Time":"2026-10-24T12:44:09.804077726+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dependency_outage_preserves_batch_and_likes"}
+{"Time":"2026-10-24T12:44:09.804081153+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dependency_outage_preserves_batch_and_likes","Output":"=== RUN   TestCountersSIS2/dependency_outage_preserves_batch_and_likes\n"}
+{"Time":"2026-10-24T12:44:09.805821567+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dependency_outage_preserves_batch_and_likes","Output":"redis: 2026/10/24 12:44:09 pool.go:715: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:1: connect: connection refused\n"}
+{"Time":"2026-10-24T12:44:09.809712654+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dependency_outage_preserves_batch_and_likes","Output":"--- PASS: TestCountersSIS2/dependency_outage_preserves_batch_and_likes (0.01s)\n"}
+{"Time":"2026-10-24T12:44:09.809735948+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/dependency_outage_preserves_batch_and_likes","Elapsed":0.01}
+{"Time":"2026-10-24T12:44:09.809740898+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/freshness_under_two_seconds_and_one_worker"}
+{"Time":"2026-10-24T12:44:09.809745777+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/freshness_under_two_seconds_and_one_worker","Output":"=== RUN   TestCountersSIS2/freshness_under_two_seconds_and_one_worker\n"}
+{"Time":"2026-10-24T12:44:09.884833487+05:00","Action":"output","Package":"highload-counters/test/integration/auth","Output":"ok  \thighload-counters/test/integration/auth\t1.748s\n"}
+{"Time":"2026-10-24T12:44:09.884896356+05:00","Action":"pass","Package":"highload-counters/test/integration/auth","Elapsed":1.748}
+{"Time":"2026-10-24T12:44:10.81757758+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/freshness_under_two_seconds_and_one_worker","Output":"    counters_test.go:334: accepted-to-visible latency: 905.073562ms\n"}
+{"Time":"2026-10-24T12:44:10.818037503+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/freshness_under_two_seconds_and_one_worker","Output":"--- PASS: TestCountersSIS2/freshness_under_two_seconds_and_one_worker (1.01s)\n"}
+{"Time":"2026-10-24T12:44:10.818056278+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/freshness_under_two_seconds_and_one_worker","Elapsed":1.01}
+{"Time":"2026-10-24T12:44:10.818063071+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/deadline_cancellation_and_codes"}
+{"Time":"2026-10-24T12:44:10.818066067+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/deadline_cancellation_and_codes","Output":"=== RUN   TestCountersSIS2/deadline_cancellation_and_codes\n"}
+{"Time":"2026-10-24T12:44:10.921098999+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/deadline_cancellation_and_codes","Output":"--- PASS: TestCountersSIS2/deadline_cancellation_and_codes (0.10s)\n"}
+{"Time":"2026-10-24T12:44:10.921135138+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2/deadline_cancellation_and_codes","Elapsed":0.1}
+{"Time":"2026-10-24T12:44:10.942834463+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2","Output":"--- PASS: TestCountersSIS2 (2.26s)\n"}
+{"Time":"2026-10-24T12:44:10.942881592+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Test":"TestCountersSIS2","Elapsed":2.26}
+{"Time":"2026-10-24T12:44:10.942889227+05:00","Action":"run","Package":"highload-counters/test/integration/counters","Test":"TestCrashHelper"}
+{"Time":"2026-10-24T12:44:10.942892834+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCrashHelper","Output":"=== RUN   TestCrashHelper\n"}
+{"Time":"2026-10-24T12:44:10.942910888+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCrashHelper","Output":"    counters_test.go:378: subprocess helper\n"}
+{"Time":"2026-10-24T12:44:10.942934433+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Test":"TestCrashHelper","Output":"--- SKIP: TestCrashHelper (0.00s)\n"}
+{"Time":"2026-10-24T12:44:10.942946015+05:00","Action":"skip","Package":"highload-counters/test/integration/counters","Test":"TestCrashHelper","Elapsed":0}
+{"Time":"2026-10-24T12:44:10.942971172+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Output":"PASS\n"}
+{"Time":"2026-10-24T12:44:11.955190224+05:00","Action":"output","Package":"highload-counters/test/integration/counters","Output":"ok  \thighload-counters/test/integration/counters\t3.288s\n"}
+{"Time":"2026-10-24T12:44:11.955237253+05:00","Action":"pass","Package":"highload-counters/test/integration/counters","Elapsed":3.288}

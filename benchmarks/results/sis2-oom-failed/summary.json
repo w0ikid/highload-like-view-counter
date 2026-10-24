@@ -1,0 +1,80 @@
+[
+  {
+    "concurrency": 1,
+    "elapsedSeconds": 60.001428626,
+    "errorCounts": {
+      "HTTP 503": 91922
+    },
+    "errors": 91922,
+    "go": "go1.26.2",
+    "latencyPopulation": "all attempts including failed requests; includes in-flight drain",
+    "operation": "views",
+    "p50ms": 0.4111,
+    "p95ms": 0.658419,
+    "p99ms": 0.790821,
+    "protocol": "rest",
+    "requestedDuration": "1m0s",
+    "retries": 0,
+    "rps": 2164.4151310044845,
+    "success": 37946,
+    "successfulRps": 632.4182751801534,
+    "warmup": "10s",
+    "run": 1,
+    "command": [
+      "/tmp/highload-counters-bench",
+      "-protocol",
+      "rest",
+      "-address",
+      "http://localhost:18080",
+      "-op",
+      "views",
+      "-concurrency",
+      "1",
+      "-duration",
+      "60s",
+      "-warmup",
+      "10s",
+      "-retries",
+      "0"
+    ]
+  },
+  {
+    "concurrency": 1,
+    "elapsedSeconds": 60.002590579,
+    "errorCounts": {
+      "rpc error: code = Unavailable desc = service unavailable": 183346
+    },
+    "errors": 183346,
+    "go": "go1.26.2",
+    "latencyPopulation": "all attempts including failed requests; includes in-flight drain",
+    "operation": "views",
+    "p50ms": 0.23281200000000002,
+    "p95ms": 0.546457,
+    "p99ms": 0.652137,
+    "protocol": "grpc",
+    "requestedDuration": "1m0s",
+    "retries": 0,
+    "rps": 3555.813139752537,
+    "success": 30012,
+    "successfulRps": 500.17840413883306,
+    "warmup": "10s",
+    "run": 1,
+    "command": [
+      "/tmp/highload-counters-bench",
+      "-protocol",
+      "grpc",
+      "-address",
+      "localhost:19090",
+      "-op",
+      "views",
+      "-concurrency",
+      "1",
+      "-duration",
+      "60s",
+      "-warmup",
+      "10s",
+      "-retries",
+      "0"
+    ]
+  }
+]

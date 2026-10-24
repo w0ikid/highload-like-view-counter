@@ -3,7 +3,7 @@ syntax = "proto3";
 package counters.v1;
 option go_package = "highload-counters/api/gen/counters/v1;countersv1";
 
-// Draft contract. All RPCs receive the trusted test identity in x-user-id metadata.
+// Test mode uses x-user-id metadata; bearer mode uses authorization metadata.
 service CounterService {
   rpc LikePost(LikeRequest) returns (LikeResponse);
   rpc UnlikePost(LikeRequest) returns (LikeResponse);

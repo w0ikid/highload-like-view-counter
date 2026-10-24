@@ -1,0 +1,1042 @@
+{
+  "arguments": {
+    "duration": "3s",
+    "warmup": "1s",
+    "runs": 3,
+    "concurrency": "1,10,50",
+    "operations": "read,views,likes",
+    "output": "benchmarks/results/sis2-local",
+    "binary": "/tmp/highload-counters-bench"
+  },
+  "machine": {
+    "system": "Linux",
+    "node": "danialibrashov-B650-AORUS-ELITE-AX-V2",
+    "release": "7.0.0-38-generic",
+    "version": "#38~24.04.4-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep 14 16:37:11 UTC 2",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "logicalCPUs": 16,
+  "cpuinfo": "processor\t: 0\nvendor_id\t: AuthenticAMD\ncpu family\t: 25\nmodel\t\t: 97\nmodel name\t: AMD Ryzen 7 7700 8-Core Processor\nstepping\t: 2\nmicrocode\t: 0xa60120a\ncpu MHz\t\t: 4298.029\ncache size\t: 1024 KB\nphysical id\t: 0\nsiblings\t: 16\ncore id\t\t: 0\ncpu cores\t: 8\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 16\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpuid_fault cpb cat_l3 cdp_l3 hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d amd_lbr_pmc_freeze\nbugs\t\t: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso spectre_v2_user tsa vmscape\nbogomips\t: 7585.36\nTLB size\t: 3584 4K pages\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 48 bits physical, 48 bits virtual\npower management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]",
+  "meminfo": "MemTotal:       31901320 kB\nMemFree:          826828 kB\nMemAvailable:    8196188 kB\nBuffers:          176816 kB\nCached:          5663048 kB\nSwapCached:       119804 kB\nActive:         11669720 kB\nInactive:       12409712 kB\nActive(anon):   10007512 kB\nInactive(anon):  6804080 kB\nActive(file):    1662208 kB\nInactive(file):  5605632 kB\nUnevictable:         240 kB\nMlocked:             240 kB\nSwapTotal:       8388604 kB\nSwapFree:        3013836 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              4964 kB\nWriteback:            12 kB\nAnonPages:      18185168 kB\nMapped:          2399744 kB\nShmem:           1107860 kB\nKReclaimable:     551860 kB\nSlab:            1050424 kB\nSReclaimable:     551860 kB\nSUnreclaim:       498564 kB\nKernelStack:       72684 kB\nPageTables:       248944 kB\nSecPageTables:      4048 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    24339264 kB\nCommitted_AS:   55263460 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      172248 kB\nVmallocChunk:          0 kB\nPercpu:            28928 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      8192 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:          114020 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nGPUActive:      24932148 kB\nGPUReclaim:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    25222368 kB\nDirectMap2M:     5265408 kB\nDirectMap1G:     2097152 kB\n",
+  "docker": "{\"Client\":{\"Platform\":{\"Name\":\"Docker Engine - Community\"},\"Version\":\"29.6.0\",\"ApiVersion\":\"1.55\",\"DefaultAPIVersion\":\"1.55\",\"GitCommit\":\"fb59821\",\"GoVersion\":\"go1.26.4\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"BuildTime\":\"Thu Jun 18 19:57:31 2026\",\"Context\":\"default\"},\"Server\":{\"Platform\":{\"Name\":\"Docker Engine - Community\"},\"Version\":\"29.6.0\",\"ApiVersion\":\"1.55\",\"MinAPIVersion\":\"1.40\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"Components\":[{\"Name\":\"Engine\",\"Version\":\"29.6.0\",\"Details\":{\"ApiVersion\":\"1.55\",\"Arch\":\"amd64\",\"BuildTime\":\"Thu Jun 18 19:57:31 2026\",\"Experimental\":\"false\",\"GitCommit\":\"70eaf5e\",\"GoVersion\":\"go1.26.4\",\"KernelVersion\":\"7.0.0-38-generic\",\"MinAPIVersion\":\"1.40\",\"Module\":\"github.com/moby/moby/v2\",\"ModuleVersion\":\"v2.0.0+unknown\",\"Os\":\"linux\"}},{\"Name\":\"containerd\",\"Version\":\"v2.2.5\",\"Details\":{\"GitCommit\":\"e53c7c1516c3b2bff98eb76f1f4117477e6f4e66\"}},{\"Name\":\"runc\",\"Version\":\"1.3.6\",\"Details\":{\"GitCommit\":\"v1.3.6-0-g491b69ba\"}},{\"Name\":\"docker-init\",\"Version\":\"0.19.0\",\"Details\":{\"GitCommit\":\"de40ad0\"}}],\"GitCommit\":\"70eaf5e\",\"GoVersion\":\"go1.26.4\",\"KernelVersion\":\"7.0.0-38-generic\",\"BuildTime\":\"2026-06-18T19:57:31.000000000+00:00\"}}\n",
+  "containers": [
+    {
+      "Id": "ac8189dc1ac1dac4655a3fdb9da5fb117944bb1fefa626b20d614b3ddba5bd6a",
+      "Created": "2026-10-24T07:45:09.431204592Z",
+      "Path": "/app/api",
+      "Args": [],
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 3050616,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-24T07:45:11.639029562Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      },
+      "Image": "sha256:f672e0eefcf498b02730a765214e8905cd665c7abf8c057378d73c700cd39854",
+      "ResolvConfPath": "/var/lib/docker/containers/ac8189dc1ac1dac4655a3fdb9da5fb117944bb1fefa626b20d614b3ddba5bd6a/resolv.conf",
+      "HostnamePath": "/var/lib/docker/containers/ac8189dc1ac1dac4655a3fdb9da5fb117944bb1fefa626b20d614b3ddba5bd6a/hostname",
+      "HostsPath": "/var/lib/docker/containers/ac8189dc1ac1dac4655a3fdb9da5fb117944bb1fefa626b20d614b3ddba5bd6a/hosts",
+      "LogPath": "/var/lib/docker/containers/ac8189dc1ac1dac4655a3fdb9da5fb117944bb1fefa626b20d614b3ddba5bd6a/ac8189dc1ac1dac4655a3fdb9da5fb117944bb1fefa626b20d614b3ddba5bd6a-json.log",
+      "Name": "/counters-sis2-bench-api-1",
+      "RestartCount": 0,
+      "Driver": "overlayfs",
+      "Platform": "linux",
+      "MountLabel": "",
+      "ProcessLabel": "",
+      "AppArmorProfile": "docker-default",
+      "ExecIDs": null,
+      "HostConfig": {
+        "Binds": null,
+        "ContainerIDFile": "",
+        "LogConfig": {
+          "Type": "json-file",
+          "Config": {}
+        },
+        "NetworkMode": "counters-sis2-bench_default",
+        "PortBindings": {
+          "8080/tcp": [
+            {
+              "HostIp": "127.0.0.1",
+              "HostPort": "18080"
+            }
+          ],
+          "9090/tcp": [
+            {
+              "HostIp": "127.0.0.1",
+              "HostPort": "19090"
+            }
+          ]
+        },
+        "RestartPolicy": {
+          "Name": "no",
+          "MaximumRetryCount": 0
+        },
+        "AutoRemove": false,
+        "VolumeDriver": "",
+        "VolumesFrom": null,
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "CapAdd": null,
+        "CapDrop": null,
+        "CgroupnsMode": "private",
+        "Dns": null,
+        "DnsOptions": null,
+        "DnsSearch": null,
+        "ExtraHosts": [],
+        "GroupAdd": null,
+        "IpcMode": "private",
+        "Cgroup": "",
+        "Links": null,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyRootfs": false,
+        "SecurityOpt": null,
+        "UTSMode": "",
+        "UsernsMode": "",
+        "ShmSize": 67108864,
+        "Runtime": "runc",
+        "Isolation": "",
+        "CpuShares": 0,
+        "Memory": 536870912,
+        "NanoCpus": 2000000000,
+        "CgroupParent": "",
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": null,
+        "BlkioDeviceReadBps": null,
+        "BlkioDeviceWriteBps": null,
+        "BlkioDeviceReadIOps": null,
+        "BlkioDeviceWriteIOps": null,
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "Devices": null,
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "MemoryReservation": 0,
+        "MemorySwap": 1073741824,
+        "MemorySwappiness": null,
+        "OomKillDisable": null,
+        "PidsLimit": null,
+        "Ulimits": null,
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "IOMaximumIOps": 0,
+        "IOMaximumBandwidth": 0,
+        "MaskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/interrupts",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/sched_debug",
+          "/proc/scsi",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/sys/devices/virtual/powercap",
+          "/sys/firmware"
+        ],
+        "ReadonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ]
+      },
+      "Storage": {
+        "RootFS": {
+          "Snapshot": {
+            "Name": "overlayfs"
+          }
+        }
+      },
+      "Mounts": [],
+      "Config": {
+        "Hostname": "ac8189dc1ac1",
+        "Domainname": "",
+        "User": "app",
+        "AttachStdin": false,
+        "AttachStdout": true,
+        "AttachStderr": true,
+        "ExposedPorts": {
+          "8080/tcp": {},
+          "9090/tcp": {}
+        },
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+          "REDIS_NAMESPACE=bench",
+          "REDIS_ADDR=redis:6379",
+          "REQUEST_TIMEOUT=1s",
+          "POSTGRES_TIMEOUT=500ms",
+          "COUNTER_AUTH_MODE=test",
+          "POSTGRES_DSN=postgres://bench:bench_local@postgres:5432/counters_bench?sslmode=disable",
+          "REDIS_TIMEOUT=100ms",
+          "JWT_SECRET=benchmark-local-secret-not-for-production-32",
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Cmd": null,
+        "Image": "counters-sis2-bench:local",
+        "Volumes": null,
+        "WorkingDir": "/app",
+        "Entrypoint": [
+          "/app/api"
+        ],
+        "Labels": {
+          "com.docker.compose.config-hash": "59ddc9022a5d11055a54c70613ad30149d588ffb51ad4e34c22ac5514fa8499a",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "redis:service_healthy:false,migrate:service_completed_successfully:false",
+          "com.docker.compose.image": "sha256:dc4523f212056c4d2d6474788f30d359790397bdbd762b462beeee4246ea04ad",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "counters-sis2-bench",
+          "com.docker.compose.project.config_files": "/home/danialibrashov/study/highload-like-view-counter/benchmarks/compose.yaml",
+          "com.docker.compose.project.working_dir": "/home/danialibrashov/study/highload-like-view-counter/benchmarks",
+          "com.docker.compose.service": "api",
+          "com.docker.compose.version": "5.1.4"
+        }
+      },
+      "NetworkSettings": {
+        "SandboxID": "0bb98b531bfecb846882ccfa35ee9c7492c9130865bfda21cd2e1df2663f65ce",
+        "SandboxKey": "/var/run/docker/netns/0bb98b531bfe",
+        "Ports": {
+          "8080/tcp": [
+            {
+              "HostIp": "127.0.0.1",
+              "HostPort": "18080"
+            }
+          ],
+          "9090/tcp": [
+            {
+              "HostIp": "127.0.0.1",
+              "HostPort": "19090"
+            }
+          ]
+        },
+        "Networks": {
+          "counters-sis2-bench_default": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": [
+              "counters-sis2-bench-api-1",
+              "api"
+            ],
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "57711e4e5e6838c5ff9cf8f78417c8b5beffb912aaffc37ac75af7f7fa8840b7",
+            "EndpointID": "ea578a46e7a51ddde84d3d1e5ab21e520d402219ca2db14e6f41d46311753ba6",
+            "Gateway": "192.168.192.1",
+            "IPAddress": "192.168.192.4",
+            "MacAddress": "76:f9:2c:a0:e5:b6",
+            "IPPrefixLen": 20,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": [
+              "counters-sis2-bench-api-1",
+              "api",
+              "ac8189dc1ac1"
+            ]
+          }
+        }
+      },
+      "ImageManifestDescriptor": {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:2a3bfc1e84abda4b9ed0cd5cb1e22d86cac1653a81fbe55867b19e768f358261",
+        "size": 1049,
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      }
+    },
+    {
+      "Id": "fc40d1027e211a3213131e3ef6ec7edb0f626def5dd7f2b82109fde6892459d7",
+      "Created": "2026-10-24T07:45:09.273150019Z",
+      "Path": "docker-entrypoint.sh",
+      "Args": [
+        "postgres"
+      ],
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 3050199,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-24T07:45:09.46067046Z",
+        "FinishedAt": "0001-01-01T00:00:00Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-24T12:45:10.548031479+05:00",
+              "End": "2026-10-24T12:45:10.597149866+05:00",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            },
+            {
+              "Start": "2026-10-24T12:45:11.597830109+05:00",
+              "End": "2026-10-24T12:45:11.624825577+05:00",
+              "ExitCode": 0,
+              "Output": "/var/run/postgresql:5432 - accepting connections\n"
+            }
+          ]
+        }
+      },
+      "Image": "sha256:eee6c6e1b0894fa4fe0075eb054af9fd1cf39a35321c2d4110626cfe506411fb",
+      "ResolvConfPath": "/var/lib/docker/containers/fc40d1027e211a3213131e3ef6ec7edb0f626def5dd7f2b82109fde6892459d7/resolv.conf",
+      "HostnamePath": "/var/lib/docker/containers/fc40d1027e211a3213131e3ef6ec7edb0f626def5dd7f2b82109fde6892459d7/hostname",
+      "HostsPath": "/var/lib/docker/containers/fc40d1027e211a3213131e3ef6ec7edb0f626def5dd7f2b82109fde6892459d7/hosts",
+      "LogPath": "/var/lib/docker/containers/fc40d1027e211a3213131e3ef6ec7edb0f626def5dd7f2b82109fde6892459d7/fc40d1027e211a3213131e3ef6ec7edb0f626def5dd7f2b82109fde6892459d7-json.log",
+      "Name": "/counters-sis2-bench-postgres-1",
+      "RestartCount": 0,
+      "Driver": "overlayfs",
+      "Platform": "linux",
+      "MountLabel": "",
+      "ProcessLabel": "",
+      "AppArmorProfile": "docker-default",
+      "ExecIDs": null,
+      "HostConfig": {
+        "Binds": null,
+        "ContainerIDFile": "",
+        "LogConfig": {
+          "Type": "json-file",
+          "Config": {}
+        },
+        "NetworkMode": "counters-sis2-bench_default",
+        "PortBindings": {},
+        "RestartPolicy": {
+          "Name": "no",
+          "MaximumRetryCount": 0
+        },
+        "AutoRemove": false,
+        "VolumeDriver": "",
+        "VolumesFrom": null,
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "CapAdd": null,
+        "CapDrop": null,
+        "CgroupnsMode": "private",
+        "Dns": null,
+        "DnsOptions": null,
+        "DnsSearch": null,
+        "ExtraHosts": [],
+        "GroupAdd": null,
+        "IpcMode": "private",
+        "Cgroup": "",
+        "Links": null,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyRootfs": false,
+        "SecurityOpt": null,
+        "Tmpfs": {
+          "/var/lib/postgresql/data": ""
+        },
+        "UTSMode": "",
+        "UsernsMode": "",
+        "ShmSize": 67108864,
+        "Runtime": "runc",
+        "Isolation": "",
+        "CpuShares": 0,
+        "Memory": 1073741824,
+        "NanoCpus": 2000000000,
+        "CgroupParent": "",
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": null,
+        "BlkioDeviceReadBps": null,
+        "BlkioDeviceWriteBps": null,
+        "BlkioDeviceReadIOps": null,
+        "BlkioDeviceWriteIOps": null,
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "Devices": null,
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "MemoryReservation": 0,
+        "MemorySwap": 2147483648,
+        "MemorySwappiness": null,
+        "OomKillDisable": null,
+        "PidsLimit": null,
+        "Ulimits": null,
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "IOMaximumIOps": 0,
+        "IOMaximumBandwidth": 0,
+        "MaskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/interrupts",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/sched_debug",
+          "/proc/scsi",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/sys/devices/virtual/powercap",
+          "/sys/firmware"
+        ],
+        "ReadonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ]
+      },
+      "Storage": {
+        "RootFS": {
+          "Snapshot": {
+            "Name": "overlayfs"
+          }
+        }
+      },
+      "Mounts": [],
+      "Config": {
+        "Hostname": "fc40d1027e21",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": true,
+        "AttachStderr": true,
+        "ExposedPorts": {
+          "5432/tcp": {}
+        },
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+          "POSTGRES_USER=bench",
+          "POSTGRES_PASSWORD=bench_local",
+          "POSTGRES_DB=counters_bench",
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "GOSU_VERSION=1.19",
+          "LANG=en_US.utf8",
+          "PG_MAJOR=17",
+          "PG_VERSION=17.11",
+          "PG_SHA256=dd27f2b3c59e73ed14aa3324901242bf69a032a6347805f274e6260322d42979",
+          "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+          "PGDATA=/var/lib/postgresql/data"
+        ],
+        "Cmd": [
+          "postgres"
+        ],
+        "Healthcheck": {
+          "Test": [
+            "CMD-SHELL",
+            "pg_isready -U bench -d counters_bench"
+          ],
+          "Interval": 1000000000,
+          "Timeout": 1000000000,
+          "Retries": 30
+        },
+        "Image": "postgres:17-alpine",
+        "Volumes": {
+          "/var/lib/postgresql/data": {}
+        },
+        "WorkingDir": "/",
+        "Entrypoint": [
+          "docker-entrypoint.sh"
+        ],
+        "Labels": {
+          "com.docker.compose.config-hash": "31769c2dd2a0ba936332201e63843b5ca33d5ca7e6da1de6e85ef32c97eb21b5",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:eee6c6e1b0894fa4fe0075eb054af9fd1cf39a35321c2d4110626cfe506411fb",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "counters-sis2-bench",
+          "com.docker.compose.project.config_files": "/home/danialibrashov/study/highload-like-view-counter/benchmarks/compose.yaml",
+          "com.docker.compose.project.working_dir": "/home/danialibrashov/study/highload-like-view-counter/benchmarks",
+          "com.docker.compose.service": "postgres",
+          "com.docker.compose.version": "5.1.4"
+        },
+        "StopSignal": "SIGINT"
+      },
+      "NetworkSettings": {
+        "SandboxID": "3a8715e76cae1614675579c642723a8e2549c4cd34734ce72b2843b8d6fabf79",
+        "SandboxKey": "/var/run/docker/netns/3a8715e76cae",
+        "Ports": {
+          "5432/tcp": null
+        },
+        "Networks": {
+          "counters-sis2-bench_default": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": [
+              "counters-sis2-bench-postgres-1",
+              "postgres"
+            ],
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "57711e4e5e6838c5ff9cf8f78417c8b5beffb912aaffc37ac75af7f7fa8840b7",
+            "EndpointID": "5a4ae536034ec04488855f400613cb565d019197600ab0614db93a7d807b71e0",
+            "Gateway": "192.168.192.1",
+            "IPAddress": "192.168.192.2",
+            "MacAddress": "e6:bb:04:07:ce:1c",
+            "IPPrefixLen": 20,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": [
+              "counters-sis2-bench-postgres-1",
+              "postgres",
+              "fc40d1027e21"
+            ]
+          }
+        }
+      },
+      "ImageManifestDescriptor": {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:e4cb93687b062cd25a0e8f672d85a7708235009d70d31f8a7698d9370092a9c4",
+        "size": 2866,
+        "annotations": {
+          "com.docker.official-images.bashbrew.arch": "amd64",
+          "org.opencontainers.image.base.digest": "sha256:c26612752c78b18faacd63c7d50f4592c2e7b0f25e0e20e82bd74e465c57ab0d",
+          "org.opencontainers.image.base.name": "alpine:3.24",
+          "org.opencontainers.image.created": "2026-10-21T22:54:57Z",
+          "org.opencontainers.image.revision": "2603e26e245e558218728ee14e0a42dcb020dc7f",
+          "org.opencontainers.image.source": "https://github.com/docker-library/postgres.git#2603e26e245e558218728ee14e0a42dcb020dc7f:17/alpine3.24",
+          "org.opencontainers.image.url": "https://hub.docker.com/_/postgres",
+          "org.opencontainers.image.version": "17.11-alpine3.24"
+        },
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      }
+    },
+    {
+      "Id": "f4f31a4ae437d1a20dbbfbdce210fd07222830735f9bb07256a567c454eedd2b",
+      "Created": "2026-10-24T07:45:09.272644128Z",
+      "Path": "docker-entrypoint.sh",
+      "Args": [
+        "redis-server",
+        "--appendonly",
+        "yes",
+        "--appendfsync",
+        "everysec",
+        "--maxmemory",
+        "256mb",
+        "--maxmemory-policy",
+        "noeviction"
+      ],
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 3050197,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-24T07:45:09.461217769Z",
+        "FinishedAt": "0001-01-01T00:00:00Z",
+        "Health": {
+          "Status": "healthy",
+          "FailingStreak": 0,
+          "Log": [
+            {
+              "Start": "2026-10-24T12:45:10.553380894+05:00",
+              "End": "2026-10-24T12:45:10.588256042+05:00",
+              "ExitCode": 0,
+              "Output": "PONG\n"
+            },
+            {
+              "Start": "2026-10-24T12:45:11.588588935+05:00",
+              "End": "2026-10-24T12:45:11.621355309+05:00",
+              "ExitCode": 0,
+              "Output": "PONG\n"
+            }
+          ]
+        }
+      },
+      "Image": "sha256:57e4255cc971b1c8d6f8a6ca283ac01bc3ecdd914273ef6bfaede87aaecd6541",
+      "ResolvConfPath": "/var/lib/docker/containers/f4f31a4ae437d1a20dbbfbdce210fd07222830735f9bb07256a567c454eedd2b/resolv.conf",
+      "HostnamePath": "/var/lib/docker/containers/f4f31a4ae437d1a20dbbfbdce210fd07222830735f9bb07256a567c454eedd2b/hostname",
+      "HostsPath": "/var/lib/docker/containers/f4f31a4ae437d1a20dbbfbdce210fd07222830735f9bb07256a567c454eedd2b/hosts",
+      "LogPath": "/var/lib/docker/containers/f4f31a4ae437d1a20dbbfbdce210fd07222830735f9bb07256a567c454eedd2b/f4f31a4ae437d1a20dbbfbdce210fd07222830735f9bb07256a567c454eedd2b-json.log",
+      "Name": "/counters-sis2-bench-redis-1",
+      "RestartCount": 0,
+      "Driver": "overlayfs",
+      "Platform": "linux",
+      "MountLabel": "",
+      "ProcessLabel": "",
+      "AppArmorProfile": "docker-default",
+      "ExecIDs": null,
+      "HostConfig": {
+        "Binds": null,
+        "ContainerIDFile": "",
+        "LogConfig": {
+          "Type": "json-file",
+          "Config": {}
+        },
+        "NetworkMode": "counters-sis2-bench_default",
+        "PortBindings": {},
+        "RestartPolicy": {
+          "Name": "no",
+          "MaximumRetryCount": 0
+        },
+        "AutoRemove": false,
+        "VolumeDriver": "",
+        "VolumesFrom": null,
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "CapAdd": null,
+        "CapDrop": null,
+        "CgroupnsMode": "private",
+        "Dns": null,
+        "DnsOptions": null,
+        "DnsSearch": null,
+        "ExtraHosts": [],
+        "GroupAdd": null,
+        "IpcMode": "private",
+        "Cgroup": "",
+        "Links": null,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyRootfs": false,
+        "SecurityOpt": null,
+        "Tmpfs": {
+          "/data": ""
+        },
+        "UTSMode": "",
+        "UsernsMode": "",
+        "ShmSize": 67108864,
+        "Runtime": "runc",
+        "Isolation": "",
+        "CpuShares": 0,
+        "Memory": 536870912,
+        "NanoCpus": 1000000000,
+        "CgroupParent": "",
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": null,
+        "BlkioDeviceReadBps": null,
+        "BlkioDeviceWriteBps": null,
+        "BlkioDeviceReadIOps": null,
+        "BlkioDeviceWriteIOps": null,
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "Devices": null,
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "MemoryReservation": 0,
+        "MemorySwap": 1073741824,
+        "MemorySwappiness": null,
+        "OomKillDisable": null,
+        "PidsLimit": null,
+        "Ulimits": null,
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "IOMaximumIOps": 0,
+        "IOMaximumBandwidth": 0,
+        "MaskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/interrupts",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/sched_debug",
+          "/proc/scsi",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/sys/devices/virtual/powercap",
+          "/sys/firmware"
+        ],
+        "ReadonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ]
+      },
+      "Storage": {
+        "RootFS": {
+          "Snapshot": {
+            "Name": "overlayfs"
+          }
+        }
+      },
+      "Mounts": [],
+      "Config": {
+        "Hostname": "f4f31a4ae437",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": true,
+        "AttachStderr": true,
+        "ExposedPorts": {
+          "6379/tcp": {}
+        },
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "REDIS_VERSION=7.4.11"
+        ],
+        "Cmd": [
+          "redis-server",
+          "--appendonly",
+          "yes",
+          "--appendfsync",
+          "everysec",
+          "--maxmemory",
+          "256mb",
+          "--maxmemory-policy",
+          "noeviction"
+        ],
+        "Healthcheck": {
+          "Test": [
+            "CMD",
+            "redis-cli",
+            "ping"
+          ],
+          "Interval": 1000000000,
+          "Timeout": 1000000000,
+          "Retries": 30
+        },
+        "Image": "redis:7.4-alpine",
+        "Volumes": {
+          "/data": {}
+        },
+        "WorkingDir": "/data",
+        "Entrypoint": [
+          "docker-entrypoint.sh"
+        ],
+        "Labels": {
+          "com.docker.compose.config-hash": "ae5393411a34ed3e67d0226f65385cfc1eb820b23e36c795f9d724156c2f5ab9",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:57e4255cc971b1c8d6f8a6ca283ac01bc3ecdd914273ef6bfaede87aaecd6541",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "counters-sis2-bench",
+          "com.docker.compose.project.config_files": "/home/danialibrashov/study/highload-like-view-counter/benchmarks/compose.yaml",
+          "com.docker.compose.project.working_dir": "/home/danialibrashov/study/highload-like-view-counter/benchmarks",
+          "com.docker.compose.service": "redis",
+          "com.docker.compose.version": "5.1.4"
+        }
+      },
+      "NetworkSettings": {
+        "SandboxID": "345f8564ec0910dd45aed3ea0d6a3d800535615e7398766f4bc6c911b057c1b0",
+        "SandboxKey": "/var/run/docker/netns/345f8564ec09",
+        "Ports": {
+          "6379/tcp": null
+        },
+        "Networks": {
+          "counters-sis2-bench_default": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": [
+              "counters-sis2-bench-redis-1",
+              "redis"
+            ],
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "57711e4e5e6838c5ff9cf8f78417c8b5beffb912aaffc37ac75af7f7fa8840b7",
+            "EndpointID": "7e995ce0d853f0e9c2f5d1a690183ba91ca0fb1aa99bbcadbe6f567b9a85639b",
+            "Gateway": "192.168.192.1",
+            "IPAddress": "192.168.192.3",
+            "MacAddress": "82:63:e8:7e:ad:b5",
+            "IPPrefixLen": 20,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": [
+              "counters-sis2-bench-redis-1",
+              "redis",
+              "f4f31a4ae437"
+            ]
+          }
+        }
+      },
+      "ImageManifestDescriptor": {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:8be847644e195abc4c10c8d9936cfa45332eccc6b714fa7b186ff43f1f4d5579",
+        "size": 2288,
+        "annotations": {
+          "com.docker.official-images.bashbrew.arch": "amd64",
+          "org.opencontainers.image.base.digest": "sha256:f765c92e59538d44c6946f8073bdbffd2e8d5916981161faed1b30aa0ef0c2c5",
+          "org.opencontainers.image.base.name": "alpine:3.21",
+          "org.opencontainers.image.created": "2026-10-21T21:13:28Z",
+          "org.opencontainers.image.revision": "74654c612ee06275377d483dc4e134e57b463e9e",
+          "org.opencontainers.image.source": "https://github.com/redis/docker-library-redis.git#74654c612ee06275377d483dc4e134e57b463e9e:alpine",
+          "org.opencontainers.image.url": "https://hub.docker.com/_/redis",
+          "org.opencontainers.image.version": "7.4.11-alpine"
+        },
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      }
+    },
+    {
+      "Id": "76f1ca02b772f2ba56a45b550c7bcb271885f9ae86cd21e6faf2ef52bdc1ef31",
+      "Created": "2026-10-24T07:45:09.431043817Z",
+      "Path": "/app/worker",
+      "Args": [],
+      "State": {
+        "Status": "running",
+        "Running": true,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 3050615,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-24T07:45:11.639580809Z",
+        "FinishedAt": "0001-01-01T00:00:00Z"
+      },
+      "Image": "sha256:f672e0eefcf498b02730a765214e8905cd665c7abf8c057378d73c700cd39854",
+      "ResolvConfPath": "/var/lib/docker/containers/76f1ca02b772f2ba56a45b550c7bcb271885f9ae86cd21e6faf2ef52bdc1ef31/resolv.conf",
+      "HostnamePath": "/var/lib/docker/containers/76f1ca02b772f2ba56a45b550c7bcb271885f9ae86cd21e6faf2ef52bdc1ef31/hostname",
+      "HostsPath": "/var/lib/docker/containers/76f1ca02b772f2ba56a45b550c7bcb271885f9ae86cd21e6faf2ef52bdc1ef31/hosts",
+      "LogPath": "/var/lib/docker/containers/76f1ca02b772f2ba56a45b550c7bcb271885f9ae86cd21e6faf2ef52bdc1ef31/76f1ca02b772f2ba56a45b550c7bcb271885f9ae86cd21e6faf2ef52bdc1ef31-json.log",
+      "Name": "/counters-sis2-bench-worker-1",
+      "RestartCount": 0,
+      "Driver": "overlayfs",
+      "Platform": "linux",
+      "MountLabel": "",
+      "ProcessLabel": "",
+      "AppArmorProfile": "docker-default",
+      "ExecIDs": null,
+      "HostConfig": {
+        "Binds": null,
+        "ContainerIDFile": "",
+        "LogConfig": {
+          "Type": "json-file",
+          "Config": {}
+        },
+        "NetworkMode": "counters-sis2-bench_default",
+        "PortBindings": {},
+        "RestartPolicy": {
+          "Name": "no",
+          "MaximumRetryCount": 0
+        },
+        "AutoRemove": false,
+        "VolumeDriver": "",
+        "VolumesFrom": null,
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "CapAdd": null,
+        "CapDrop": null,
+        "CgroupnsMode": "private",
+        "Dns": null,
+        "DnsOptions": null,
+        "DnsSearch": null,
+        "ExtraHosts": [],
+        "GroupAdd": null,
+        "IpcMode": "private",
+        "Cgroup": "",
+        "Links": null,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyRootfs": false,
+        "SecurityOpt": null,
+        "UTSMode": "",
+        "UsernsMode": "",
+        "ShmSize": 67108864,
+        "Runtime": "runc",
+        "Isolation": "",
+        "CpuShares": 0,
+        "Memory": 268435456,
+        "NanoCpus": 1000000000,
+        "CgroupParent": "",
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": null,
+        "BlkioDeviceReadBps": null,
+        "BlkioDeviceWriteBps": null,
+        "BlkioDeviceReadIOps": null,
+        "BlkioDeviceWriteIOps": null,
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "Devices": null,
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "MemoryReservation": 0,
+        "MemorySwap": 536870912,
+        "MemorySwappiness": null,
+        "OomKillDisable": null,
+        "PidsLimit": null,
+        "Ulimits": null,
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "IOMaximumIOps": 0,
+        "IOMaximumBandwidth": 0,
+        "MaskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/interrupts",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/sched_debug",
+          "/proc/scsi",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/sys/devices/virtual/powercap",
+          "/sys/firmware"
+        ],
+        "ReadonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ]
+      },
+      "Storage": {
+        "RootFS": {
+          "Snapshot": {
+            "Name": "overlayfs"
+          }
+        }
+      },
+      "Mounts": [],
+      "Config": {
+        "Hostname": "76f1ca02b772",
+        "Domainname": "",
+        "User": "app",
+        "AttachStdin": false,
+        "AttachStdout": true,
+        "AttachStderr": true,
+        "ExposedPorts": {
+          "8080/tcp": {}
+        },
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+          "POSTGRES_DSN=postgres://bench:bench_local@postgres:5432/counters_bench?sslmode=disable",
+          "REDIS_ADDR=redis:6379",
+          "JWT_SECRET=benchmark-local-secret-not-for-production-32",
+          "REQUEST_TIMEOUT=1s",
+          "COUNTER_AUTH_MODE=test",
+          "REDIS_NAMESPACE=bench",
+          "REDIS_TIMEOUT=100ms",
+          "POSTGRES_TIMEOUT=500ms",
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Cmd": null,
+        "Image": "counters-sis2-bench:local",
+        "Volumes": null,
+        "WorkingDir": "/app",
+        "Entrypoint": [
+          "/app/worker"
+        ],
+        "Labels": {
+          "com.docker.compose.config-hash": "13f89b8d8804f0a2c8cdc0b0ec953a0fa053acfe3d7780399872e4f6fe70b545",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "redis:service_healthy:false,migrate:service_completed_successfully:false",
+          "com.docker.compose.image": "sha256:dc4523f212056c4d2d6474788f30d359790397bdbd762b462beeee4246ea04ad",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "counters-sis2-bench",
+          "com.docker.compose.project.config_files": "/home/danialibrashov/study/highload-like-view-counter/benchmarks/compose.yaml",
+          "com.docker.compose.project.working_dir": "/home/danialibrashov/study/highload-like-view-counter/benchmarks",
+          "com.docker.compose.service": "worker",
+          "com.docker.compose.version": "5.1.4"
+        }
+      },
+      "NetworkSettings": {
+        "SandboxID": "211eb1bdc80272b2b8e01c287bed38832a3bc03d1d2094287db680791e4f52e6",
+        "SandboxKey": "/var/run/docker/netns/211eb1bdc802",
+        "Ports": {
+          "8080/tcp": null
+        },
+        "Networks": {
+          "counters-sis2-bench_default": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": [
+              "counters-sis2-bench-worker-1",
+              "worker"
+            ],
+            "DriverOpts": null,
+            "GwPriority": 0,
+            "NetworkID": "57711e4e5e6838c5ff9cf8f78417c8b5beffb912aaffc37ac75af7f7fa8840b7",
+            "EndpointID": "bec936a54d075e040d70dee64ace27ed06c0692b1c90590aa8a09ce27e3ca531",
+            "Gateway": "192.168.192.1",
+            "IPAddress": "192.168.192.5",
+            "MacAddress": "86:6d:17:bf:18:8d",
+            "IPPrefixLen": 20,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "DNSNames": [
+              "counters-sis2-bench-worker-1",
+              "worker",
+              "76f1ca02b772"
+            ]
+          }
+        }
+      },
+      "ImageManifestDescriptor": {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:2a3bfc1e84abda4b9ed0cd5cb1e22d86cac1653a81fbe55867b19e768f358261",
+        "size": 1049,
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      }
+    }
+  ],
+  "go": "go version go1.26.2 linux/amd64\n",
+  "gitHead": "b3b2f8170fdad4c47b22c07d314e7e221d0dd0ce",
+  "gitStatus": " M .env.example\n M Dockerfile\n M cmd/worker/main.go\n M compose.yaml\n M go.mod\n M go.sum\n M internal/bootstrap/app.go\n M internal/bootstrap/config.go\n M internal/bootstrap/deps.go\n M internal/domain/counter.go\n M internal/infrastructure/redis/client.go\n?? api/gen/\n?? benchmarks/compose.yaml\n?? benchmarks/results/correctness.jsonl\n?? benchmarks/run.py\n?? buf.gen.yaml\n?? buf.yaml\n?? cmd/bench/\n?? cmd/reconcile/\n?? internal/infrastructure/postgres/counter/\n?? internal/infrastructure/redis/views.go\n?? internal/transport/counterdto/\n?? internal/transport/grpc/server.go\n?? internal/transport/identity/\n?? internal/transport/rest/counters/\n?? internal/usecase/counters/interfaces.go\n?? internal/usecase/counters/service.go\n?? internal/worker/worker.go\n?? pkg/counterclient/\n?? test/integration/counters/\n",
+  "dependencies": "module highload-counters\n\ngo 1.26.2\n\nrequire (\n\tgithub.com/jmoiron/sqlx v1.4.0\n\tgithub.com/lib/pq v1.12.3\n\tgithub.com/pressly/goose/v3 v3.27.0\n\tgithub.com/redis/go-redis/v9 v9.20.0\n)\n\nrequire (\n\tgolang.org/x/net v0.50.0 // indirect\n\tgolang.org/x/sys v0.41.0 // indirect\n\tgolang.org/x/text v0.34.0 // indirect\n\tgoogle.golang.org/genproto/googleapis/rpc v0.0.0-20260217215200-42d3e9bedb6d // indirect\n)\n\nrequire (\n\tgithub.com/cespare/xxhash/v2 v2.3.0 // indirect\n\tgithub.com/golang-jwt/jwt/v5 v5.3.1\n\tgithub.com/google/uuid v1.6.0\n\tgithub.com/mfridman/interpolate v0.0.2 // indirect\n\tgithub.com/sethvargo/go-retry v0.3.0 // indirect\n\tgo.uber.org/atomic v1.11.0 // indirect\n\tgo.uber.org/multierr v1.11.0 // indirect\n\tgolang.org/x/crypto v0.48.0\n\tgolang.org/x/sync v0.19.0 // indirect\n\tgoogle.golang.org/grpc v1.79.3\n\tgoogle.golang.org/protobuf v1.36.11\n)\n",
+  "transport": {
+    "REST": "HTTP/1.1 JSON",
+    "gRPC": "HTTP/2 Protobuf",
+    "TLS": false,
+    "compression": false,
+    "retries": 0
+  }
+}

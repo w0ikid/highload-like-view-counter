@@ -8,7 +8,7 @@ import (
 
 func New(addr string, timeout time.Duration) *goredis.Client {
 	return goredis.NewClient(&goredis.Options{
-		Addr: addr, MaxRetries: -1, ContextTimeoutEnabled: true,
+		Addr: addr, MaxRetries: -1, DialerRetries: 1, PoolTimeout: timeout, ContextTimeoutEnabled: true,
 		DialTimeout: timeout, ReadTimeout: timeout, WriteTimeout: timeout,
 	})
 }

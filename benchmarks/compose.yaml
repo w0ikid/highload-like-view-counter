@@ -1,0 +1,64 @@
+# Dedicated disposable benchmark environment; never points at application data.
+name: counters-sis2-bench
+x-app: &app
+  image: counters-sis2-bench:local
+  build:
+    context: ..
+x-env: &env
+  POSTGRES_DSN: postgres://bench:bench_local@postgres:5432/counters_bench?sslmode=disable
+  REDIS_ADDR: redis:6379
+  JWT_SECRET: benchmark-local-secret-not-for-production-32
+  COUNTER_AUTH_MODE: test
+  REDIS_NAMESPACE: bench
+  VIEW_TTL: 5s
+  POSTGRES_TIMEOUT: 500ms
+  REDIS_TIMEOUT: 100ms
+  REQUEST_TIMEOUT: 1s
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment: {POSTGRES_DB: counters_bench, POSTGRES_USER: bench, POSTGRES_PASSWORD: bench_local}
+    cpus: 2
+    mem_limit: 1g
+    tmpfs: [/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U bench -d counters_bench]
+      interval: 1s
+      timeout: 1s
+      retries: 30
+  redis:
+    image: redis:7.4-alpine
+    command: [redis-server, --appendonly, 'yes', --appendfsync, everysec, --maxmemory, 768mb, --maxmemory-policy, noeviction]
+    cpus: 1
+    mem_limit: 1536m
+    tmpfs: [/data]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 1s
+      timeout: 1s
+      retries: 30
+  migrate:
+    <<: *app
+    entrypoint: [/app/migrate]
+    command: [up]
+    environment: *env
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    <<: *app
+    environment: *env
+    ports: ['127.0.0.1:18080:8080', '127.0.0.1:19090:9090']
+    cpus: 2
+    mem_limit: 512m
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+  worker:
+    <<: *app
+    entrypoint: [/app/worker]
+    environment: *env
+    cpus: 1
+    mem_limit: 256m
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}

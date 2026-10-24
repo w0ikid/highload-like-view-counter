@@ -62,7 +62,7 @@ curl -X POST http://localhost:8080/v1/auth/forgot-password \
 
 ## Соотношение с SIS2
 
-Auth доступен только через REST и не участвует в сравнении REST/gRPC счётчиков. Сами адаптеры счётчиков ещё не реализованы. `likes.user_id` пока остаётся тестовым положительным int64 без FK, как в исходном ТЗ; `viewer_id` независим от users. Перед подключением защищённых лайков нужно выбрать режим идентификации явно: пользователь из проверенного access-токена либо изолированный benchmark-режим X-User-ID. Auth endpoints никогда не доверяют X-User-ID. Эти режимы нельзя незаметно смешивать на публичном API.
+Auth доступен только через REST и не участвует в сравнении REST/gRPC счётчиков. Адаптеры счётчиков используют общий режим COUNTER_AUTH_MODE: test принимает X-User-ID / x-user-id; bearer принимает Authorization / authorization и проверяет активную сессию. По умолчанию без env — bearer, в учебном .env.example — test. `likes.user_id` остаётся положительным int64 без FK ради benchmark-ID; viewer_id независим от users. Auth endpoints никогда не доверяют X-User-ID. Не включайте test-режим на публичном API.
 
 ## Проверки
 
