@@ -7,3 +7,4 @@
 - `correctness.jsonl` — вывод `go test -json` интеграционных проверок.
 
 Итоги и выводы: [docs/sis2-report.md](../../docs/sis2-report.md).
+- `sis2-k6` — перекрёстная проверка `cmd/bench` против k6 (`read`, `views`, c=10, 5 с + 30 с, 1 прогон), `benchmarks/k6/run.sh`.

@@ -1,0 +1,15 @@
+{
+  "tool": "k6",
+  "protocol": "grpc",
+  "operation": "read",
+  "concurrency": 10,
+  "warmup": "5s",
+  "duration": "30s",
+  "rps": 2257.3333333333335,
+  "requests": 67720,
+  "okRate": 1,
+  "p50ms": 3.2829990000000002,
+  "p95ms": 8.775484599999997,
+  "p99ms": 13.680673669999997,
+  "maxms": 80.518419
+}

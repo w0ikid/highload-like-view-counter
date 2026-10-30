@@ -1,0 +1,15 @@
+{
+  "tool": "k6",
+  "protocol": "rest",
+  "operation": "read",
+  "concurrency": 10,
+  "warmup": "5s",
+  "duration": "30s",
+  "rps": 3646.0333333333333,
+  "requests": 109381,
+  "okRate": 1,
+  "p50ms": 2.057554,
+  "p95ms": 5.452068,
+  "p99ms": 14.777187999999983,
+  "maxms": 542.036676
+}

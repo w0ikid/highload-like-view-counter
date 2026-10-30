@@ -1,0 +1,21 @@
+{
+  "concurrency": 10,
+  "elapsedSeconds": 30.069091772,
+  "errorCounts": {
+    "HTTP 503": 16
+  },
+  "errors": 16,
+  "go": "go1.26.2",
+  "latencyPopulation": "all attempts including failed requests; includes in-flight drain",
+  "operation": "views",
+  "p50ms": 5.9539729999999995,
+  "p95ms": 27.790612,
+  "p99ms": 71.799514,
+  "protocol": "rest",
+  "requestedDuration": "30s",
+  "retries": 0,
+  "rps": 1111.0079497348909,
+  "success": 33391,
+  "successfulRps": 1110.4758418773833,
+  "warmup": "5s"
+}

@@ -1,0 +1,19 @@
+{
+  "concurrency": 10,
+  "elapsedSeconds": 30.005955852,
+  "errorCounts": {},
+  "errors": 0,
+  "go": "go1.26.2",
+  "latencyPopulation": "all attempts including failed requests; includes in-flight drain",
+  "operation": "views",
+  "p50ms": 5.639940999999999,
+  "p95ms": 32.229258,
+  "p99ms": 70.248538,
+  "protocol": "grpc",
+  "requestedDuration": "30s",
+  "retries": 0,
+  "rps": 1134.808041708506,
+  "success": 34051,
+  "successfulRps": 1134.808041708506,
+  "warmup": "5s"
+}
